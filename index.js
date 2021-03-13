@@ -3,12 +3,12 @@ const title = document.querySelector("#title");
 const CLICKED_CLASS = "clicked";
 
 function handleClick() {
-  const currentClass = title.className;
+  const hasClass = title.classList.contains(CLICKED_CLASS);
   
-  if (currentClass !== CLICKED_CLASS) {
-    title.className = CLICKED_CLASS;
+  if (hasClass) {
+    title.classList.remove(CLICKED_CLASS);
   } else {
-    title.className = "";
+    title.classList.add(CLICKED_CLASS);
   }
 }
 
