@@ -1,14 +1,13 @@
 body {
-  background-color: #edf0f1;
+  background-color: #ecf0f1;
 }
 
 .btn {
   cursor: pointer;
 }
 
-h1 {
+body {
   color: #34495e;
-  transition: color 0.5s ease-in-out;
 }
 
 .clicked {
