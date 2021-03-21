@@ -4,24 +4,65 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>nomad-vanillajs</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
+    <div class="backgrounds">
+      <div class="background">
+        <div class="background-item"></div>
+      </div> 
+      <div class="background-overlay"></div>
     </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-toDoList">
-      
-    </ul>
-    <script src="clock.js"></script>
-    <script src="greeting.js"></script>
-    <script src="todo.js"></script>
+    <div class="apps">
+      <div class="top-row">
+        <div class="top-left"></div>
+        <div class="top-center"></div>
+        <div class="top-right"><span class="js-weather"></span></div>
+      </div>
+      <div class="center-above"></div>
+      <div class="text-center">
+        <div class="clock js-clock">
+          <h1>00:00</h1>
+        </div>
+        <form class="js-form form">
+          <input type="text" class="name-input js-name-input" placeholder="What is your name?" />
+        </form>
+        <h4 class="js-greetings greetings"></h4>
+      </div>
+      <div class="center-below">
+        <div class="todo-div">
+          <form class="js-toDoForm">
+            <input type="text" class="todo-input" placeholder="Add task" />
+          </form>
+        </div>
+        <div class="list-div">
+          <div class="pending-div">
+            <div class="pending-title">
+              <h2>Pending</h2>
+            </div>
+            <div class="pending-list">
+              <ul class="js-pendingList"></ul>
+            </div>
+          </div>
+          <div class="finished-div">
+            <div class="pending-title">
+              <h2>Finished</h2>
+            </div>
+            <div class="pending-list">
+              <ul class="js-finishedList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-row"></div>
+    </div>    
+    
+    
+  
+    <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
