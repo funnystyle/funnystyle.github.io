@@ -4,7 +4,13 @@ const body = document.querySelector("body"),
 const IMG_NUMBER = 21;
 
 function paintImage(imgNumber) {
-  background.style.backgroundImage = `url(images/${imgNumber + 1}.jpg)`;
+  (function(image){
+    image.onload = function(event){ 
+      background.style.backgroundImage = `url(images/${imgNumber + 1}.jpg)`;
+      };
+    image.src = `images/${imgNumber + 1}.jpg`;
+  })(new Image());
+  
 }
 
 function genRandom() {
